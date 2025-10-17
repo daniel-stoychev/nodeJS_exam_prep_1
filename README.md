@@ -14,6 +14,7 @@
 ### Render non-logged in opages
 
 - [x] create layout
+- [x] create routes
 - [] dashboard
 - [] searach
 - [] login

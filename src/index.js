@@ -2,14 +2,11 @@ import express from "express";
 import mongoose from "mongoose";
 import handlebars from "express-handlebars";
 
+import routes from "./routes.js";
+
 const app = express();
 
-// Express
-app.get('/', (req, res) => {
-    res.render('home')
-});
-
-// TODO: Express handlebars
+// Express handlebars
 app.engine('hbs', handlebars.engine({
     extname: 'hbs',
     runtimeOptions: {
@@ -23,8 +20,8 @@ app.set('views', 'src/views');
 // static files
 app.use(express.static('src/public'));
 
-
-
+// routes
+app.use(routes);
 
 
 
