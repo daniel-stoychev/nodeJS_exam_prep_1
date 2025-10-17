@@ -14,6 +14,14 @@ routes.get('/search', (req, res) => {
     res.render('search')
 });
 
+routes.get('/login', (req, res) => {
+    res.render('login')
+});
+
+routes.get('/register', (req, res) => {
+    res.render('register')
+});
+
 routes.get('/*splat', (req, res) => {
     res.status(404).render('404');
 });

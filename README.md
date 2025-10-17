@@ -15,8 +15,8 @@
 
 - [x] create layout
 - [x] create routes
-- [] dashboard
-- [] searach
+- [x] dashboard
+- [x] searach
 - [] login
 - [] register
 
