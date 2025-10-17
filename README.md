@@ -6,6 +6,7 @@
 - [x] setup debuging
 - [x] install & config Express
 - [x] make firts commit
-- [] install & config Mongoose (MongoDB)
-- [] add resources
+- [x] install & config Mongoose (MongoDB)
+- [x] add resources
+- [] install & config Handlebars
 - [] render homePage
