@@ -9,4 +9,17 @@
 - [x] install & config Mongoose (MongoDB)
 - [x] add resources
 - [x] install & config Handlebars & static files
-- [] render homePage
+- [x] render homePage
+
+### Render non-logged in opages
+
+- [x] create layout
+- [] dashboard
+- [] searach
+- [] login
+- [] register
+
+- []
+- []
+- []
+- []
