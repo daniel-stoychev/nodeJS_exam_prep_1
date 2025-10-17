@@ -5,7 +5,7 @@
 - [x] initialize project
 - [x] setup debuging
 - [x] install & config Express
-- [] make firts commit
+- [x] make firts commit
 - [] install & config Mongoose (MongoDB)
 - [] add resources
 - [] render homePage
