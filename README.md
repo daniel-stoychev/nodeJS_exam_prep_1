@@ -8,5 +8,5 @@
 - [x] make firts commit
 - [x] install & config Mongoose (MongoDB)
 - [x] add resources
-- [] install & config Handlebars
+- [x] install & config Handlebars & static files
 - [] render homePage
