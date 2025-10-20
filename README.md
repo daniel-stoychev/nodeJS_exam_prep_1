@@ -33,7 +33,8 @@
   - [x] update routes
     - [x] login
     - [x] register
-- [] Add User model
+  - [x] add urlencoded() to index
+- [x] Add User model
+  - [x] Add password hashing
 - [] Add User service
 - [] Handle registration (create user in database)
-- [] Add password hashing

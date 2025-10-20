@@ -19,6 +19,7 @@ app.set('view engine', 'hbs');
 app.set('views', 'src/views');
 // static files
 app.use(express.static('src/public'));
+app.use(express.urlencoded());
 
 // routes
 app.use(routes);
