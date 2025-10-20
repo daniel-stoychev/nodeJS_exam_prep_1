@@ -1,22 +1,18 @@
 import { Router } from "express";
 import homeController from "./controllers/homeController.js";
+import authController from "./controllers/authController.js";
 
 const routes = Router();
 
 
 routes.use(homeController);
+routes.use('/auth', authController);
+
+
 
 
 routes.get('/dashboard', (req, res) => {
     res.render('dashboard')
-});
-
-routes.get('/login', (req, res) => {
-    res.render('login')
-});
-
-routes.get('/register', (req, res) => {
-    res.render('register')
 });
 
 routes.get('/*splat', (req, res) => {

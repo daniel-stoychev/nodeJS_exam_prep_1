@@ -29,7 +29,10 @@
 
 ## Register functionality
 
-- [] Add new controller `authController`
+- [x] Add new controller `authController`
+  - [x] update routes
+    - [x] login
+    - [x] register
 - [] Add registration page
 - [] Add User model
 - [] Add User service
