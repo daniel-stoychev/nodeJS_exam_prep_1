@@ -33,7 +33,6 @@
   - [x] update routes
     - [x] login
     - [x] register
-- [] Add registration page
 - [] Add User model
 - [] Add User service
 - [] Handle registration (create user in database)
