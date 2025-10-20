@@ -36,5 +36,5 @@
   - [x] add urlencoded() to index
 - [x] Add User model
   - [x] Add password hashing
-- [] Add User service
-- [] Handle registration (create user in database)
+- [x] Add User service
+- [x] Handle registration (create user in database)
