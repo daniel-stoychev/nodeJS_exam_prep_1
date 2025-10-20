@@ -1,17 +1,14 @@
 import { Router } from "express";
+import homeController from "./controllers/homeController.js";
 
 const routes = Router();
 
-routes.get('/', (req, res) => {
-    res.render('home')
-});
+
+routes.use(homeController);
+
 
 routes.get('/dashboard', (req, res) => {
     res.render('dashboard')
-});
-
-routes.get('/search', (req, res) => {
-    res.render('search')
 });
 
 routes.get('/login', (req, res) => {

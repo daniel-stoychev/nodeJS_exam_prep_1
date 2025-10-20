@@ -11,7 +11,7 @@
 - [x] install & config Handlebars & static files
 - [x] render homePage
 
-### Render non-logged in opages
+### Render pages
 
 - [x] create layout
 - [x] create routes
@@ -19,8 +19,19 @@
 - [x] searach
 - [x] login
 - [x] register
+- [x] add homeController
+  - [x] update routes
+    - [x] home
+    - [x] search
+- []
+- []
+- []
 
-- []
-- []
-- []
-- []
+## Register functionality
+
+- [] Add new controller `authController`
+- [] Add registration page
+- [] Add User model
+- [] Add User service
+- [] Handle registration (create user in database)
+- [] Add password hashing
