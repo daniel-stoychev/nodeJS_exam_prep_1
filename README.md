@@ -38,3 +38,4 @@
   - [x] Add password hashing
 - [x] Add User service
 - [x] Handle registration (create user in database)
+- [x] RePassword must match

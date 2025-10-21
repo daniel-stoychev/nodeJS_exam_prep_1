@@ -14,8 +14,20 @@ authController.get('/register', (req, res) => {
 authController.post('/register', async (req, res) => {
 
     const userData = req.body;
-    await userService.register(userData);
-    res.redirect('/');
+
+    if (userData.password === userData.rePassword) {
+        await userService.register(userData);
+        res.redirect('/');
+
+    } else {
+        res.send(`
+            <script>
+                alert('Password and rePassword must match!');
+                window.location.href = '/auth/register'; // Optionally redirect back to the register page
+            </script> 
+            `);
+    }
+
 
 });
 
