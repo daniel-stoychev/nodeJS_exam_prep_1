@@ -23,9 +23,19 @@
   - [x] update routes
     - [x] home
     - [x] search
+- [] Setup pages names for browser tab
 - []
 - []
-- []
+
+## Add animal page
+
+- [x] Fix create.html & update form
+- [x] Render add animal page
+  - [x] Add animal controller
+  - [x] Add route to routes.js
+- [] Add animal model
+- [] Add animal service & save animal collection to database
+- [] Redirect to dashboard page
 
 ## Register functionality
 
