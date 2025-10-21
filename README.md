@@ -33,9 +33,10 @@
 - [x] Render add animal page
   - [x] Add animal controller
   - [x] Add route to routes.js
-- [] Add animal model
-- [] Add animal service & save animal collection to database
-- [] Redirect to dashboard page
+- [x] Add animal model
+- [x] Add animal service & save animal collection to database
+- [x] Redirect to dashboard page
+- [x] Add required validations to model
 
 ## Register functionality
 
