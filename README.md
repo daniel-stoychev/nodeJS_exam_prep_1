@@ -55,6 +55,6 @@
 
 - [ ] Handle login page
   - [x] Validate user
-  - [ ] Validate password
+  - [x] Validate password
   - [ ] Create token
   - [ ] Return token to client

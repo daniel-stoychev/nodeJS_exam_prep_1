@@ -1,4 +1,5 @@
 import User from "../models/User.js";
+import bcrypt from "bcrypt";
 
 export default {
     register(userData) {
@@ -10,5 +11,10 @@ export default {
             throw new Error("Username or password invalid!");
         }
 
+        const isValid = await bcrypt.compare(password, user.password);
+
+        if (!isValid) {
+            throw new Error("Username or password invalid!");
+        }
     }
 }
