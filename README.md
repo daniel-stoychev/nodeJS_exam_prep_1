@@ -53,7 +53,7 @@
 
 ## Login functionality
 
-- [ ] Handle login page
+- [x] Handle login page
   - [x] Validate user
   - [x] Validate password
   - [x] Create token
