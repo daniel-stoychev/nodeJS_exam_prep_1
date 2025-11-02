@@ -50,3 +50,11 @@
 - [x] Add User service
 - [x] Handle registration (create user in database)
 - [x] RePassword must match
+
+## Login functionality
+
+- [ ] Handle login page
+  - [x] Validate user
+  - [ ] Validate password
+  - [ ] Create token
+  - [ ] Return token to client
