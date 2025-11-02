@@ -57,4 +57,4 @@
   - [x] Validate user
   - [x] Validate password
   - [x] Create token
-  - [ ] Return token to client
+  - [x] Return token to client

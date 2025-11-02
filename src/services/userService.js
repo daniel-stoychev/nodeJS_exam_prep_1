@@ -21,13 +21,12 @@ export default {
         if (!isValid) {
             throw new Error("Username or password invalid!");
         }
-
         const payload = {
             id: user.id,
             email: user.email
         }
 
-        const token = jwt.sign(payload, JWT_SECRET);
+        const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '2h' });
 
         return token;
 
