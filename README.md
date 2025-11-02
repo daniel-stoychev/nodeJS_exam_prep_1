@@ -54,7 +54,13 @@
 ## Login functionality
 
 - [x] Handle login page
+
   - [x] Validate user
   - [x] Validate password
   - [x] Create token
   - [x] Return token to client
+
+  ## Logout functionality
+
+  - [x] Add logout action
+  - [x] Clear cookie
