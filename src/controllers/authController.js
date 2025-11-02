@@ -34,6 +34,8 @@ authController.get('/login', (req, res) => {
 authController.post('/login', async (req, res) => {
     const { email, password } = req.body;
     const token = await userService.login(email, password);
+    res.end();
+
 });
 
 export default authController;
