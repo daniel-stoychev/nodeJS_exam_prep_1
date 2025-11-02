@@ -60,7 +60,15 @@
   - [x] Create token
   - [x] Return token to client
 
-  ## Logout functionality
+## Logout functionality
 
-  - [x] Add logout action
-  - [x] Clear cookie
+- [x] Add logout action
+- [x] Clear cookie
+
+## Authorization
+
+- [x] Add `authMiddleware`
+- [x] Install cookie parser
+- [x] Add auth middleware
+- [x] Add isAuth route guard
+- [x] Add isGuest route guard

@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import handlebars from "express-handlebars";
 
 import routes from "./routes.js";
+import authMiddleware from "./middlewares/authMiddleware.js";
+import cookieParser from "cookie-parser";
 
 const app = express();
 
@@ -19,7 +21,10 @@ app.set('view engine', 'hbs');
 app.set('views', 'src/views');
 // static files
 app.use(express.static('src/public'));
+//middlewares
 app.use(express.urlencoded());
+app.use(cookieParser());
+app.use(authMiddleware);
 
 // routes
 app.use(routes);
