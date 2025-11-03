@@ -88,3 +88,11 @@
 - [x] Create delete function at service
 - [x] Update animalController with delete request
   - [x] Validate delete action (only from owner)
+
+## Edit action
+
+- [x] Render Edit view
+- [x] Update placehoders in view
+- [ ]
+
+## Dashboard
