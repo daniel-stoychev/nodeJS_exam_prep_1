@@ -30,8 +30,17 @@ animalController.get('/:id/delete', async (req, res) => {
     const isOwner = animal.owner && animal.owner.equals(req.user?.id);
     if (isOwner) {
         await animalService.removeOne(animalId);
+        res.redirect('/dashboard');
+    } else {
+        throw new Error("Not owner - cannot delete!");
+
     }
-    res.redirect('/dashboard');
+});
+
+animalController.get('/:id/edit', async (req, res) => {
+    const animalId = req.params.id;
+    const animal = await animalService.getOne(animalId);
+    res.render('animals/edit', { animal });
 });
 
 export default animalController;
