@@ -8,5 +8,9 @@ export default {
                 owner: userId
             });
         }
+    },
+    getAll() {
+        const allAnimals = Animal.find();
+        return allAnimals;
     }
 }

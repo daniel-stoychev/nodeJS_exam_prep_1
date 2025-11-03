@@ -76,5 +76,5 @@
 ## Refactor & bind functionalities
 
 - [x] Add Owner ID to database upon creation of Animal
-- [ ] List dynamic animals on homepage
+- [x] List dynamic animals on homepage
 - [ ] Add details functionality
