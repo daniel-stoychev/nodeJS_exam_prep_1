@@ -17,6 +17,9 @@ export default {
         const selectedAnimal = Animal.findById(id);
 
         return selectedAnimal;
+    },
+    removeOne(id) {
+        return Animal.findByIdAndDelete(id);
     }
 
 }

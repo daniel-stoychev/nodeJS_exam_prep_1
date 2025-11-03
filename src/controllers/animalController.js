@@ -24,4 +24,10 @@ animalController.get('/:id', async (req, res) => {
 
 });
 
+animalController.get('/:id/delete', (req, res) => {
+    console.log('TEST');
+    res.end();
+
+});
+
 export default animalController;

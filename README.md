@@ -82,3 +82,9 @@
   - [x] Update guest view
   - [ ] Update user view
   - [x] Update owner view
+
+## Delete action
+
+- [x] Create delete function at service
+- [ ] Update animalController with request
+  - [ ] Validate delete action (only from owner)
