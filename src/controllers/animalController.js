@@ -15,4 +15,13 @@ animalController.post('/add', (req, res) => {
 
 });
 
+animalController.get('/:id', async (req, res) => {
+    const animalId = req.params.id;
+    const animal = await animalService.getOne(animalId);
+
+    const isOwner = animal.owner && animal.owner.equals(req.user?.id);
+    res.render('animals/details', { animal, isOwner });
+
+});
+
 export default animalController;

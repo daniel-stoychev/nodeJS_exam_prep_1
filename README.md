@@ -78,3 +78,7 @@
 - [x] Add Owner ID to database upon creation of Animal
 - [x] List dynamic animals on homepage
 - [ ] Add details functionality
+  - [x] Render details
+  - [x] Update guest view
+  - [ ] Update user view
+  - [x] Update owner view

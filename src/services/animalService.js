@@ -12,5 +12,11 @@ export default {
     getAll() {
         const allAnimals = Animal.find();
         return allAnimals;
+    },
+    getOne(id) {
+        const selectedAnimal = Animal.findById(id);
+
+        return selectedAnimal;
     }
+
 }
