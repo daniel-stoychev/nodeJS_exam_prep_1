@@ -24,10 +24,14 @@ animalController.get('/:id', async (req, res) => {
 
 });
 
-animalController.get('/:id/delete', (req, res) => {
-    console.log('TEST');
-    res.end();
-
+animalController.get('/:id/delete', async (req, res) => {
+    const animalId = req.params.id;
+    const animal = await animalService.getOne(animalId);
+    const isOwner = animal.owner && animal.owner.equals(req.user?.id);
+    if (isOwner) {
+        await animalService.removeOne(animalId);
+    }
+    res.redirect('/dashboard');
 });
 
 export default animalController;

@@ -86,5 +86,5 @@
 ## Delete action
 
 - [x] Create delete function at service
-- [ ] Update animalController with request
-  - [ ] Validate delete action (only from owner)
+- [x] Update animalController with delete request
+  - [x] Validate delete action (only from owner)
