@@ -9,7 +9,8 @@ animalController.get('/add', (req, res) => {
 
 animalController.post('/add', (req, res) => {
     const animalData = req.body;
-    animalService.create(animalData);
+    const userId = req.user.id;
+    animalService.create(animalData, userId);
     res.redirect('/dashboard');
 
 });

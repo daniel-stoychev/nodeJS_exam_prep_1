@@ -72,3 +72,9 @@
 - [x] Add auth middleware
 - [x] Add isAuth route guard
 - [x] Add isGuest route guard
+
+## Refactor & bind functionalities
+
+- [x] Add Owner ID to database upon creation of Animal
+- [ ] List dynamic animals on homepage
+- [ ] Add details functionality

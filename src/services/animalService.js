@@ -1,9 +1,12 @@
 import Animal from "../models/Animal.js";
 
 export default {
-    create(animalData) {
+    create(animalData, userId) {
         {
-            Animal.create(animalData);
+            Animal.create({
+                ...animalData,
+                owner: userId
+            });
         }
     }
 }
