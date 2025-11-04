@@ -99,5 +99,5 @@
 
 - [x] Render dashboard view
 - [x] Load dynamic content (animals)
-- [ ] Fix details buttons
+- [x] Fix details buttons
 - [ ] Redirect to animal details page
