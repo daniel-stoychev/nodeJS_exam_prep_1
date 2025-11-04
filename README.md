@@ -84,7 +84,7 @@
     - [x] Add donation service
     - [x] Update details view with donate button
     - [x] Update controller with post donate request
-    - [ ] Setup hasDonated check
+    - [x] Setup hasDonated check
   - [x] Update owner view
 
 ## Delete action
