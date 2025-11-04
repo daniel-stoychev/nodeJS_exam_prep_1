@@ -9,6 +9,13 @@ homeController.get('/', async (req, res) => {
     res.render('home', { limitAnimalsToThree });
 });
 
+homeController.get('/dashboard', async (req, res) => {
+    const allAnimals = await animalService.getAll();
+    console.log(allAnimals);
+
+    res.render('dashboard', { allAnimals });
+});
+
 homeController.get('/search', (req, res) => {
     res.render('search')
 });

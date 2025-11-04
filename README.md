@@ -80,7 +80,7 @@
 - [ ] Add details functionality
   - [x] Render details
   - [x] Update guest view
-  - [ ] Update user view
+  - [ ] Update user view with donations/you already donated
   - [x] Update owner view
 
 ## Delete action
@@ -96,3 +96,8 @@
 - [ ]
 
 ## Dashboard
+
+- [x] Render dashboard view
+- [x] Load dynamic content (animals)
+- [ ] Fix details buttons
+- [ ] Redirect to animal details page
