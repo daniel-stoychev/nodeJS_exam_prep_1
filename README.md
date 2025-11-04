@@ -100,4 +100,4 @@
 - [x] Render dashboard view
 - [x] Load dynamic content (animals)
 - [x] Fix details buttons
-- [ ] Redirect to animal details page
+- [x] Redirect to animal details page
