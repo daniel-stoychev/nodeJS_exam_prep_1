@@ -20,6 +20,9 @@ export default {
     },
     removeOne(id) {
         return Animal.findByIdAndDelete(id);
+    },
+    edit(id) {
+        return Animal.findByIdAndUpdate(id);
     }
 
 }

@@ -93,7 +93,9 @@
 
 - [x] Render Edit view
 - [x] Update placehoders in view
-- [ ]
+- [x] Add Edit service
+- [ ] Add post edit action to controller
+- [ ] Redirect to current nimal details page
 
 ## Dashboard
 
@@ -101,3 +103,5 @@
 - [x] Load dynamic content (animals)
 - [x] Fix details buttons
 - [x] Redirect to animal details page
+
+## Error handling
