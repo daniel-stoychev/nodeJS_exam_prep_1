@@ -43,4 +43,21 @@ animalController.get('/:id/edit', async (req, res) => {
     res.render('animals/edit', { animal });
 });
 
+animalController.post('/:id/edit', async (req, res) => {
+    const animalId = req.params.id;
+    const animal = await animalService.getOne(animalId);
+    const idOwner = animal.owner && animal.owner.equals(req.user?.id);
+
+    if (idOwner) {
+        const newAnimal = await animalService.edit(animalId, req.body);
+        res.redirect(`/animal/${animalId}`);
+    } else {
+        throw new Error("Not owner - cannot edit!");
+
+    }
+
+});
+
+
+
 export default animalController;

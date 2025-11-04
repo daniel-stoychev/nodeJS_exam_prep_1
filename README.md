@@ -94,8 +94,9 @@
 - [x] Render Edit view
 - [x] Update placehoders in view
 - [x] Add Edit service
-- [ ] Add post edit action to controller
-- [ ] Redirect to current nimal details page
+- [x] Add post edit action to controller
+  - [x] validate owner
+- [x] Redirect to current nimal details page
 
 ## Dashboard
 
