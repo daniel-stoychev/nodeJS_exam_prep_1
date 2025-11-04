@@ -7,10 +7,10 @@ animalController.get('/add', (req, res) => {
     res.render('create')
 });
 
-animalController.post('/add', (req, res) => {
+animalController.post('/add', async (req, res) => {
     const animalData = req.body;
     const userId = req.user.id;
-    animalService.create(animalData, userId);
+    await animalService.create(animalData, userId);
     res.redirect('/dashboard');
 
 });

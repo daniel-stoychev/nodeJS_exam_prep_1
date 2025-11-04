@@ -23,6 +23,13 @@ export default {
     },
     edit(id, data) {
         return Animal.findByIdAndUpdate(id, data, { new: true, runValidators: true });
+    },
+    donate(animalId, userId) {
+        return Animal.findByIdAndUpdate(animalId, {
+            $addToSe: { donations: userId },
+            new: true,
+            runValidators: true
+        });
     }
 
 }
