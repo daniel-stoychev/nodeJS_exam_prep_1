@@ -49,12 +49,20 @@ animalController.post('/:id/edit', async (req, res) => {
     const idOwner = animal.owner && animal.owner.equals(req.user?.id);
 
     if (idOwner) {
-        const newAnimal = await animalService.edit(animalId, req.body);
+        await animalService.edit(animalId, req.body);
         res.redirect(`/animal/${animalId}`);
     } else {
         throw new Error("Not owner - cannot edit!");
 
     }
+});
+
+animalController.get('/:id/donate', async (req, res) => {
+    const animalId = req.params.id;
+    const userId = req.user.id;
+
+    await animalService.donate(animalId, userId);
+    res.redirect(`/animal/${animalId}`);
 
 });
 

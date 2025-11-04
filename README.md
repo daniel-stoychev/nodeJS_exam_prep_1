@@ -82,8 +82,9 @@
   - [x] Update guest view
   - [ ] Update user view with donations/you already donated
     - [x] Add donation service
-    - [ ] Update details view with donate button
-    - [ ] Update controller with post donate request
+    - [x] Update details view with donate button
+    - [x] Update controller with post donate request
+    - [ ] Setup hasDonated check
   - [x] Update owner view
 
 ## Delete action

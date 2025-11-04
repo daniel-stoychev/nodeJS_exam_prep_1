@@ -26,7 +26,7 @@ export default {
     },
     donate(animalId, userId) {
         return Animal.findByIdAndUpdate(animalId, {
-            $addToSe: { donations: userId },
+            $addToSet: { donations: userId },
             new: true,
             runValidators: true
         });
