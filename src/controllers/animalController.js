@@ -22,11 +22,14 @@ animalController.get('/:id', async (req, res) => {
     const isOwner = animal.owner && animal.owner.equals(req.user?.id);
 
     //donations
-    const userId = req.user.id;
-    const hasDonated = await animal.donations.includes(userId);
+    if (req.user !== undefined) {
+        const userId = req.user.id;
+        const hasDonated = animal.donations.includes(userId);
 
-    res.render('animals/details', { animal, isOwner, hasDonated });
-
+        res.render('animals/details', { animal, isOwner, hasDonated });
+    } else {
+        res.render('animals/details', { animal, isOwner });
+    }
 });
 
 animalController.get('/:id/delete', async (req, res) => {
