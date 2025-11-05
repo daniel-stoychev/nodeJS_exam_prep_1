@@ -36,8 +36,6 @@ authController.post('/register', isGuest, async (req, res) => {
 
     }
 
-
-
     // if (userData.password === userData.rePassword) {
     //     const token = await userService.register(userData);
     //     res.cookie('auth', token);
@@ -61,10 +59,16 @@ authController.get('/login', isGuest, (req, res) => {
 
 authController.post('/login', isGuest, async (req, res) => {
     const { email, password } = req.body;
-    const token = await userService.login(email, password);
-    res.cookie('auth', token);
-    res.redirect('/');
 
+    try {
+        const token = await userService.login(email, password);
+        res.cookie('auth', token);
+        res.redirect('/');
+    } catch (err) {
+        res.status(400).render('auth/login', {
+            error: err.message
+        })
+    }
 });
 
 authController.get('/logout', isAuth, (req, res) => {

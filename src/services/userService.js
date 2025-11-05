@@ -10,6 +10,15 @@ export default {
 
     },
     async login(email, password) {
+
+        if (!email) {
+            throw new Error('Email & Password required!');
+        }
+        if (!password) {
+            throw new Error('Email & Password required!');
+        }
+
+
         const user = await User.findOne({ email });
 
         if (!user) {
@@ -17,7 +26,6 @@ export default {
         }
 
         const isValid = await bcrypt.compare(password, user.password);
-        console.log(isValid);
 
         if (!isValid) {
             throw new Error("Username or password invalid!");

@@ -113,4 +113,4 @@
 ## Error handling
 
 - [x] Hanlde register page
-- [ ]
+- [x] Handle login page
