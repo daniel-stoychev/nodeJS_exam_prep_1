@@ -30,7 +30,7 @@ authController.post('/register', isGuest, async (req, res) => {
         }
 
         res.status(400).render('auth/register', {
-            user: { email: userData.email },
+            user: userData.email,
             error: errorMessage
         });
 

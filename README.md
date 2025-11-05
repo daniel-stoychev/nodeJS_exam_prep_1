@@ -112,5 +112,5 @@
 
 ## Error handling
 
-- [ ] Hanlde register page
+- [x] Hanlde register page
 - [ ]
