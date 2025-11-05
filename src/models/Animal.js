@@ -4,7 +4,7 @@ const animalSchema = new Schema({
     name: {
         type: String,
         required: true,
-        minLength: 3
+        minLength: [3, 'Name must be at least 3 letters!']
     },
     years: {
         type: Number,
@@ -15,7 +15,7 @@ const animalSchema = new Schema({
     kind: {
         type: String,
         required: true,
-        minLength: 3
+        minLength: [3, 'Kind must be at least 3 letters!']
     },
     imageUrl: {
         type: String,
@@ -31,14 +31,14 @@ const animalSchema = new Schema({
     location: {
         type: String,
         required: true,
-        minLength: 5,
-        maxlength: 15
+        minLength: [5, 'Location must be between 5 and 15 letters!'],
+        maxlength: [15, 'Location must be between 5 and 15 letters!']
     },
     description: {
         type: String,
         required: true,
-        minLength: 5,
-        maxlength: 50
+        minLength: [5, 'Description too short. It must be between 5 and 50 letters!'],
+        maxlength: [50, 'Description short. It must be between 5 and 50 letters!']
     },
     donations: [{
         type: Types.ObjectId, // Assuming you want to store the ObjectId of the user who donated

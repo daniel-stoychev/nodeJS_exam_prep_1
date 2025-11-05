@@ -1,5 +1,6 @@
 import { Router } from "express";
 import animalService from "../services/animalService.js";
+import { isAuth } from "../middlewares/authMiddleware.js";
 
 const animalController = Router();
 
@@ -7,13 +8,33 @@ animalController.get('/add', (req, res) => {
     res.render('create')
 });
 
-animalController.post('/add', async (req, res) => {
-    const animalData = req.body;
-    const userId = req.user.id;
-    await animalService.create(animalData, userId);
-    res.redirect('/dashboard');
+// animalController.post('/add', async (req, res) => {
+//     const animalData = req.body;
+//     const userId = req.user.id;
+//     await animalService.create(animalData, userId);
+//     res.redirect('/dashboard');
 
+// });
+
+animalController.post('/add', isAuth, async (req, res) => {
+    const animalData = req.body;
+    const userId = req.user.id; // req.user.id идва от JWT payload, така че е стринг
+
+    try {
+        await animalService.create(animalData, userId);
+        res.redirect(`/dashboard`);
+
+    } catch (err) {
+
+        let errorMessage = Object.values(err.errors).at(0).message;
+        res.status(400).render('create', {
+            error: errorMessage,
+            animal: animalData
+        });
+    }
 });
+
+
 
 animalController.get('/:id', async (req, res) => {
     const animalId = req.params.id;
