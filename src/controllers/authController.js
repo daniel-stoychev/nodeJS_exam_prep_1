@@ -12,19 +12,45 @@ authController.post('/register', isGuest, async (req, res) => {
 
     const userData = req.body;
 
-    if (userData.password === userData.rePassword) {
+    try {
+        if (userData.password !== userData.rePassword) {
+            throw new Error('Password and rePassword must match!');
+        }
         const token = await userService.register(userData);
         res.cookie('auth', token);
         res.redirect('/');
 
-    } else {
-        res.send(`
-            <script>
-                alert('Password and rePassword must match!');
-                window.location.href = '/auth/register'; // Optionally redirect back to the register page
-            </script> 
-            `);
+    } catch (err) {
+        let errorMessage = 'Registration failed. Please try again.';
+
+        if (err.name === 'ValidationError') {
+            errorMessage = Object.values(err.errors).at(0).message;
+        } else if (err.message) {
+            errorMessage = err.message;
+        }
+
+        res.status(400).render('auth/register', {
+            user: { email: userData.email },
+            error: errorMessage
+        });
+
     }
+
+
+
+    // if (userData.password === userData.rePassword) {
+    //     const token = await userService.register(userData);
+    //     res.cookie('auth', token);
+    //     res.redirect('/');
+
+    // } else {
+    //     res.send(`
+    //         <script>
+    //             alert('Password and rePassword must match!');
+    //             window.location.href = '/auth/register'; // Optionally redirect back to the register page
+    //         </script> 
+    //         `);
+    // }
 
 
 });

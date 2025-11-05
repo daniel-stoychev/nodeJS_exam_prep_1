@@ -111,3 +111,6 @@
 - [x] Redirect to animal details page
 
 ## Error handling
+
+- [ ] Hanlde register page
+- [ ]
