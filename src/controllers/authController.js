@@ -13,7 +13,8 @@ authController.post('/register', isGuest, async (req, res) => {
     const userData = req.body;
 
     if (userData.password === userData.rePassword) {
-        await userService.register(userData);
+        const token = await userService.register(userData);
+        res.cookie('auth', token);
         res.redirect('/');
 
     } else {

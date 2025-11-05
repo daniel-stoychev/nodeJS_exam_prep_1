@@ -50,6 +50,7 @@
 - [x] Add User service
 - [x] Handle registration (create user in database)
 - [x] RePassword must match
+- [x] Automatic login on register
 
 ## Login functionality
 
