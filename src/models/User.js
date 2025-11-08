@@ -15,6 +15,20 @@ const userSchema = Schema({
     }
 });
 
+userSchema.virtual('rePassword')
+    .get(function () {
+        return this._rePassword;
+    })
+    .set(function (value) {
+        this._rePassword = value;
+    });
+
+userSchema.pre('validate', function () {
+    if (this.isNew && this.password !== this._rePassword) {
+        this.invalidate('rePassword', 'Passwords missmatche!')
+    }
+});
+
 userSchema.pre('save', async function (next) {
     this.password = await bcrypt.hash(this.password, 10);
     next();

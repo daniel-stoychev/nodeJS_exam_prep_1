@@ -120,5 +120,6 @@
 
 - [x] Refactor authController using the exercise lecture
 - [x] Add better validation for registration email format
+- [x] Move rePassword validation to User model
 - [ ] Search
 - [ ] To check Emmet redactro (faster html code writting)

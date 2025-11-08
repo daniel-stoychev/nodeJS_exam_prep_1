@@ -13,9 +13,9 @@ authController.post('/register', isGuest, async (req, res) => {
     const userData = req.body;
 
     try {
-        if (userData.password !== userData.rePassword) {
-            throw new Error('Password and rePassword must match!');
-        }
+        // if (userData.password !== userData.rePassword) {
+        //     throw new Error('Password and rePassword must match!');
+        // }
         const token = await userService.register(userData);
         res.cookie('auth', token);
         res.redirect('/');
