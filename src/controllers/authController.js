@@ -21,12 +21,10 @@ authController.post('/register', isGuest, async (req, res) => {
         res.redirect('/');
 
     } catch (err) {
-        let errorMessage = 'Registration failed. Please try again.';
+        let errorMessage = err.message;
 
         if (err.name === 'ValidationError') {
             errorMessage = Object.values(err.errors).at(0).message;
-        } else if (err.message) {
-            errorMessage = err.message;
         }
 
         res.status(400).render('auth/register', {

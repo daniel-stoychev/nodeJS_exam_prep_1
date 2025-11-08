@@ -5,7 +5,8 @@ const userSchema = Schema({
     email: {
         type: String,
         required: [true, 'Email is required!'],
-        minlength: [10, 'The email should be at least 10 chats long!']
+        minlength: [10, 'The email should be at least 10 chats long!'],
+        match: [/^[A-z0-9._-]+@[A-z0-9._-]+\.[a-z]+$/, 'Not valid mail account format!']
     },
     password: {
         type: String,

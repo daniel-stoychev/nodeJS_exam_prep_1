@@ -118,4 +118,7 @@
 
 ## Bonus
 
+- [ ] Refactor authController using the exercise lecture
+- [x] Add better validation for registration email format
 - [ ] Search
+- [ ] To check Emmet redactro (faster html code writting)
