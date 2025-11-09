@@ -121,5 +121,7 @@
 - [x] Refactor authController using the exercise lecture
 - [x] Add better validation for registration email format
 - [x] Move rePassword validation to User model
+- [ ] Deny direct EDIT URL access to non-owners (from 2:20)
+- [x] Save typed email to login if failure
 - [ ] Search
 - [ ] To check Emmet redactro (faster html code writting)

@@ -64,7 +64,8 @@ authController.post('/login', isGuest, async (req, res) => {
         res.redirect('/');
     } catch (err) {
         res.status(400).render('auth/login', {
-            error: err.message
+            error: err.message,
+            email
         })
     }
 });
