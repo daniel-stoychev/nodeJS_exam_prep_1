@@ -5,6 +5,7 @@ import handlebars from "express-handlebars";
 import routes from "./routes.js";
 import authMiddleware from "./middlewares/authMiddleware.js";
 import cookieParser from "cookie-parser";
+import pageHelpers from "./helpers/pageHelpers.js";
 
 const app = express();
 
@@ -14,6 +15,9 @@ app.engine('hbs', handlebars.engine({
     runtimeOptions: {
         allowProtoPropertiesByDefault: true,
         allowProtoMethodsByDefault: true
+    },
+    helpers: {
+        ...pageHelpers,
     }
 }));
 
